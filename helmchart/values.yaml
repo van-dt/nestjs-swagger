@@ -38,7 +38,7 @@ podAnnotations: {}
 podLabels: {}
 
 env:
-  APP_VERSION: 6d9d643d7cf7f71045b779d329507bb7ad3fff77
+  APP_VERSION: 9492d597e2d26c462e6532f34d5beed13d8f1514
 
 podSecurityContext:
   {}
