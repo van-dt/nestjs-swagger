@@ -1,7 +1,5 @@
 # NestJS Swagger
 
-Link to the blog post [OpenApi for your REST APIs in NestJS ](https://notiz.dev/blog/openapi-in-nestjs)
-
 ```bash
 npm i
 
