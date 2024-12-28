@@ -32,9 +32,9 @@ jobs:
 
       - name: Update values.yaml
         run: |
+          git pull
           cd helmchart
           sed -i 's|APP_VERSION:.*|APP_VERSION: '${{ github.sha }}'|' values.yaml
-          git pull
           git config --global user.name 'tomdevops'
           git config --global user.email 'tomdevops@gmail.com'
           git add values.yaml
