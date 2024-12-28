@@ -11,6 +11,7 @@ env:
 
 jobs:
   build-and-deploy:
+    name: Build and Deploy new API
     runs-on: ubuntu-latest
 
     steps:
@@ -38,3 +39,33 @@ jobs:
           git add values.yaml
           git commit -m "Update values.yaml"
           git push
+
+  update-openapi:
+    name: Generate and Update OpenAPI
+    runs-on: ubuntu-latest
+    needs: build-and-deploy
+
+    steps:
+      # Checkout code
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Generate OpenAPI JSON
+      # - name: Generate OpenAPI JSON
+      #   run: |
+      #     node generate-openapi.js  # Replace with your actual script
+      #     ls -l openapi.json  # Ensure the file is generated
+
+      - name: Log in to Azure
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - name: Update Azure API Management
+        run: |
+          az apim api import --service-name test-apim3110 \
+            --resource-group tom-test \
+            --api-id testapi \
+            --path / \
+            --specification-format Swagger \
+            --specification-path openapi.json
