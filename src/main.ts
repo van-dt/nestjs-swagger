@@ -19,9 +19,16 @@ async function bootstrap() {
     ...document,
     servers: [
       {
+        url: 'http://a057433cde82b4cbba58cb664bb31955-2010059547.ap-northeast-1.elb.amazonaws.com:3000',
         description: `Testing API`,
       },
     ],
+    info: {
+      title: 'NestJS Swagger',
+      description: 'API description',
+      version: '1.0',
+      contact: {},
+    },
   };
 
   try {

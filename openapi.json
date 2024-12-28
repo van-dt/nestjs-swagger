@@ -19,6 +19,24 @@
         }
       }
     },
+    "/test-update": {
+      "get": {
+        "operationId": "AppController_test",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/users": {
       "post": {
         "operationId": "UsersController_create",
@@ -317,6 +335,7 @@
   "tags": [],
   "servers": [
     {
+      "url": "http://a057433cde82b4cbba58cb664bb31955-2010059547.ap-northeast-1.elb.amazonaws.com:3000",
       "description": "Testing API"
     }
   ],

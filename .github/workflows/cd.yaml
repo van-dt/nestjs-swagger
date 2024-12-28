@@ -63,9 +63,4 @@ jobs:
 
       - name: Update Azure API Management
         run: |
-          az apim api import --service-name test-apim3110 \
-            --resource-group tom-test \
-            --api-id testapi \
-            --path / \
-            --specification-format Swagger \
-            --specification-path openapi.json
+          az apim api import -g tom-test --service-name test-apim3110 --path api --api-id api --specification-path openapi.json --specification-format OpenApiJson
