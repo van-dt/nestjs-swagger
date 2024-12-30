@@ -58,9 +58,7 @@ jobs:
       #     ls -l openapi.json  # Ensure the file is generated
 
       - name: Log in to Azure
-        uses: azure/login@v1
-        with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
+        run: az login --tenant ${{ secrets.AZURE_TENANT_ID }} -u  ${{ secrets.AZURE_USERNAME }} -p  ${{ secrets.AZURE_PASSWORD }}
 
       - name: Update Azure API Management
         run: |
