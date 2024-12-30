@@ -19,9 +19,9 @@
         }
       }
     },
-    "/test-update": {
+    "/great": {
       "get": {
-        "operationId": "AppController_test",
+        "operationId": "AppController_great",
         "parameters": [],
         "responses": {
           "200": {
