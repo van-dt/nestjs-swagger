@@ -3,12 +3,12 @@ kind: Service
 metadata:
   name: '{{ .Values.app.name }}-service'
   labels:
-    app: { { .Values.app.name } }
+    app: {{ .Values.app.name }}
 spec:
-  type: { { .Values.service.type } }
+  type: {{ .Values.service.type }}
   selector:
-    app: { { .Values.app.name } }
+    app: {{ .Values.app.name }}
   ports:
     - protocol: TCP
-      port: { { .Values.service.port } }
-      targetPort: { { .Values.container.port } }
+      port: {{ .Values.service.port }}
+      targetPort: {{ .Values.container.port }}
