@@ -14,4 +14,4 @@ service:
   port: 80
 
 env:
-  APP_VERSION: 55337bfa9ec2b5de8c1b058e629c325f585b4001
+  APP_VERSION: cb9a3f028adf37dcfeb50cfec3a1cb8d2fa4e133
