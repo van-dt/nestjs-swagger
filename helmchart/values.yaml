@@ -7,11 +7,11 @@ image:
   pullPolicy: IfNotPresent
 
 container:
-  port: 80
+  port: 3000
 
 service:
   type: LoadBalancer
-  port: 80
+  port: 3000
 
 env:
   APP_VERSION: 2d53026524e9d65883ac570e5e5cb0654d6f20bf
