@@ -12,6 +12,6 @@ export class AppController {
 
   @Get('/great')
   great(): string {
-    return 'saygex';
+    return 'saygex v1';
   }
 }

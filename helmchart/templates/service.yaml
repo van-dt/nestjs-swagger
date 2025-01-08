@@ -4,8 +4,6 @@ metadata:
   name: '{{ .Values.app.name }}-service'
   labels:
     app: {{ .Values.app.name }}
-  annotations:
-    service.beta.kubernetes.io/aws-load-balancer-internal: "true"
 spec:
   type: {{ .Values.service.type }}
   selector:
