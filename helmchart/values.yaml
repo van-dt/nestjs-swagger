@@ -14,4 +14,4 @@ service:
   port: 3000
 
 env:
-  APP_VERSION: 46ae8dadb61707df2460bf2adafb457ca5f192fc
+  APP_VERSION: 0d9430eaaeef822f4b499ea8c62c5e21605a3ffa
